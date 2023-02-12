@@ -1,0 +1,29 @@
+uuid: 8205c84f-46b8-491f-a653-a91f1416b39f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_members
+    - node.type.group
+    - node.type.person
+id: node.group.field_members
+field_name: field_members
+entity_type: node
+bundle: group
+label: Members
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

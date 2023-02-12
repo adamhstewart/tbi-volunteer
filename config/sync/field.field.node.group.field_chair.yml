@@ -1,0 +1,29 @@
+uuid: c0e8914c-cc02-4a00-bfe3-91dda7ad44df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chair
+    - node.type.group
+    - node.type.person
+id: node.group.field_chair
+field_name: field_chair
+entity_type: node
+bundle: group
+label: Chair
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

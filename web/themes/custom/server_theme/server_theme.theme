@@ -100,8 +100,6 @@ function server_theme_theme() {
   $info['server_theme_header'] = [
     'variables' => [
       'search_block' => NULL,
-      'language_block_dropdown' => NULL,
-      'language_block_links' => NULL,
       'menu' => NULL,
       // Site name from the config.
       'site_name' => \Drupal::config('system.site')->get('name'),
@@ -180,6 +178,23 @@ function server_theme_theme() {
   $info['server_theme_tags'] = [
     'variables' => [
       // The name of the field that holds the tags.
+      'title' => NULL,
+      'items' => [],
+    ],
+  ];
+
+  // A single referenced person.
+  $info['server_theme_person'] = [
+    'variables' => [
+      'title' => NULL,
+      'url' => NULL,
+    ],
+  ];
+
+  // A list of people.
+  $info['server_theme_people'] = [
+    'variables' => [
+      // The name of the field that holds the people.
       'title' => NULL,
       'items' => [],
     ],
@@ -465,8 +480,6 @@ function server_theme_preprocess_page(array &$variables) {
         'language' => $language,
       ]),
     ],
-    '#language_block_dropdown' => server_theme_prepare_block('language_dropdown_block:language_interface', $language_block_config),
-    '#language_block_links' => server_theme_prepare_block('language_block:language_interface', $language_block_config),
     '#menu' => [
       '#theme' => 'server_theme_header_menu',
       '#items' => server_theme_prepare_menu_links('main'),

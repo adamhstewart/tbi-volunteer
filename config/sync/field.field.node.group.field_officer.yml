@@ -1,0 +1,29 @@
+uuid: bdd2b29d-da20-4a1b-a0bd-6cc16ba81c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_officer
+    - node.type.group
+    - taxonomy.vocabulary.officers
+id: node.group.field_officer
+field_name: field_officer
+entity_type: node
+bundle: group
+label: Officer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      officers: officers
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

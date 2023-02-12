@@ -4,6 +4,7 @@ namespace Drupal\server_general\EntityViewBuilder;
 
 use Drupal\pluggable_entity_view_builder\EntityViewBuilderPluginAbstract;
 use Drupal\server_general\ElementWrapTrait;
+use Drupal\server_general\PeopleTrait;
 use Drupal\server_general\ProcessedTextBuilderTrait;
 use Drupal\server_general\TagTrait;
 
@@ -13,6 +14,7 @@ use Drupal\server_general\TagTrait;
 abstract class NodeViewBuilderAbstract extends EntityViewBuilderPluginAbstract {
 
   use ElementWrapTrait;
+  use PeopleTrait;
   use ProcessedTextBuilderTrait;
   use TagTrait;
 

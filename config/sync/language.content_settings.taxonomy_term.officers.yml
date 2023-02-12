@@ -1,0 +1,11 @@
+uuid: a068ca8d-a4b6-42f1-8e27-0ed15dbe7efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.officers
+id: taxonomy_term.officers
+target_entity_type_id: taxonomy_term
+target_bundle: officers
+default_langcode: site_default
+language_alterable: false

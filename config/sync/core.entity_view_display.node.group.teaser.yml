@@ -1,0 +1,32 @@
+uuid: 34883009-86b2-4931-b0d9-5acf135a6270
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.group.field_chair
+    - field.field.node.group.field_description
+    - field.field.node.group.field_group_type
+    - field.field.node.group.field_members
+    - field.field.node.group.field_officer
+    - node.type.group
+  module:
+    - user
+id: node.group.teaser
+targetEntityType: node
+bundle: group
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_chair: true
+  field_description: true
+  field_group_type: true
+  field_members: true
+  field_officer: true
+  langcode: true
+  search_api_excerpt: true

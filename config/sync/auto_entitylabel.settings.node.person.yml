@@ -1,0 +1,9 @@
+status: 1
+pattern: '[node:field_last_name:value], [node:field_first_name:value]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.person
